@@ -10,7 +10,7 @@ last_target = Point()
 last_target.x = rospy.get_param('des_pos_x')
 last_target.y = rospy.get_param('des_pos_y')
 last_target.z = 0
-
+# Sevice active state
 active_ = False
 
 # Service callback function
@@ -20,7 +20,7 @@ def last_target_handler(req):
     print(f"\nLast Target set by the user: x = {last_target.x:.4f}, y = {last_target.y:.4f}")
 
 
-    # You can also return the coordinates as part of the service response
+    # Return the status of the service call
     active_ = req.data
     response = SetBoolResponse()
     response.success = True
@@ -34,12 +34,13 @@ def goal_callback(msg):
     last_target.y = msg.goal.target_pose.pose.position.y 
 
 def main():
+    # Initialize the node
     rospy.init_node('last_target')
 
     # Subscribe to the reaching_goal/goal topic
     sub_goal = rospy.Subscriber('/reaching_goal/goal', PlanningActionGoal, goal_callback)
 
-    # Create a ROS service
+    # Create the service
     rospy.Service('last_target', SetBool, last_target_handler)
 
     rospy.spin()
