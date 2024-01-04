@@ -44,13 +44,13 @@ $ rosservice call distance_from_goal True
 
 ## Flowchart of the node (a) user_interface
 1. Main function <br>
-![Main_function](https://github.com/IrisLaanearu/assignment_2_2023/assets/145934148/98508392-9662-4f6b-b282-fd3ad56a4402)
+![Main_function](https://github.com/IrisLaanearu/assignment_2_2023/assets/145934148/e1a6bca8-a69b-43d6-9f44-fbc17a8c4064)
 
 2. Set goal function <br>
 ![image](https://github.com/IrisLaanearu/assignment_2_2023/assets/145934148/75645cf6-4ed8-40af-bc73-fef4b1d747b7)
 
 3. Cancel goal function <br>
-![cancel goal](https://github.com/IrisLaanearu/assignment_2_2023/assets/145934148/9670b158-7efb-4c48-b866-492df8b04f02)
+![cancel goal](https://github.com/IrisLaanearu/assignment_2_2023/assets/145934148/99bd26d3-c790-4664-84d5-40441066b435)
 
 4. Odom callback function <br>
 ![image](https://github.com/IrisLaanearu/assignment_2_2023/assets/145934148/b4d0b0e3-191c-4779-926a-d837bd122ead)
